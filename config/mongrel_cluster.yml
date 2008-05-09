@@ -1,5 +1,5 @@
 --- 
-cwd: /home/rails/www/yahoowall
+cwd: /home/rails/www/yahoowall/current/
 port: "8300"
 environment: production
 address: 127.0.0.1
