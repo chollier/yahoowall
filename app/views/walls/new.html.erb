@@ -1,0 +1,35 @@
+<h2>New wall</h2>
+
+<%= error_messages_for :wall %>
+
+<% form_for(@wall) do |f| %>
+  <p>
+    <b>Name</b><br />
+    <%= f.text_field :nom %>
+  </p>
+
+  <p>
+    <b>Description</b><br />
+    <%= f.text_field :description %>
+  </p>
+
+<fieldset id="players" size="45">
+	<legend>Users</legend>
+  <p>
+	<%= text_field_with_auto_complete :player1, :nom, {}, { :param_name => 'player[nom]' } %>
+  </p>
+</fieldset>
+
+
+	<%= link_to_function "Add an user", "add()" %>
+	<%= hidden_field 'players_posted', 'number', :value => '1'%>
+
+  <p>
+    <%= f.submit "Create" %>
+  </p>
+<% end %>
+
+<div class="liensdubas">
+<%= link_to 'Back',:action => "index" %>
+</div>
+

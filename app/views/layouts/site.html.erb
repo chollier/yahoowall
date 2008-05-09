@@ -1,0 +1,29 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+  <meta name="description" content="Create a Yahoo Live Wall" />
+  <meta name="keywords" content="yahoo wall live, yahoo wall, yahoo live, live wall, mur d'image" />
+  <meta name="author" content="Loic CHOLLIER" />
+  <title>Yahoo Live Wall</title>
+  <%= stylesheet_link_tag 'yahoowall' %>
+	<%= javascript_include_tag "playermore" %>
+	<%= javascript_include_tag :all, :cache => true %>
+</head>
+<body>
+
+<div id="page">
+
+<p style="color: green"><%= flash[:notice] %></p>
+
+<h1><%= link_to "Yahoo Live Wall", :action => "index" %></h1>
+
+<%= yield  %>
+
+<div class="footer"><p><a href="http://blogs.chollier.com/articles/2008/03/06/yahoo-live-wall">Howto Use this website (fr)</a> - Created by <a href="http://blogs.chollier.com">Lo&iuml;c CHOLLIER</a> - <a href="mailto:loic@chollier.com">Contact</a> - <a 
+href="http://blogs.chollier.com">Blog</a></p></div>
+</div>
+</body>
+</html>

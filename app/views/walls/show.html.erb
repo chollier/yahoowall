@@ -1,0 +1,14 @@
+<h2><%=h @wall.nom %></h2>
+
+<h3><%=h @wall.description %></h3>
+
+<% @wall.players.each do |player| %>
+	<div class="block">
+		<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="412" height="363" codebase="http://fpdownload.macromedia.com/get/flashplayer/current/swflash.cab"><param name="movie" value="http://live.yahoo.com/swf/player/<%= player.nom %>" /><embed src="http://live.yahoo.com/swf/player/<%= player.nom %>" width="412" height="363" type="application/x-shockwave-flash" pluginspage="http://www.adobe.com/go/getflashplayer"></embed></object>
+	</div>
+<% end %>
+
+<div class="clear"></div>
+<div class="liensdubas">
+<%= link_to 'Back',:action => "index" %>
+</div>

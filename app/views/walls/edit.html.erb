@@ -1,0 +1,37 @@
+<h1>Editing wall</h1>
+
+<%= error_messages_for :wall %>
+
+<% form_for(@wall) do |f| %>
+  <p>
+    <b>Nom</b><br />
+    <%= f.text_field :nom %>
+  </p>
+
+  <p>
+    <b>Description</b><br />
+    <%= f.text_field :description %>
+  </p>
+
+  <p>
+    <b>Colonnes</b><br />
+    <%= f.text_field :colonnes %>
+  </p>
+
+  <p>
+    <b>Lignes</b><br />
+    <%= f.text_field :lignes %>
+  </p>
+
+  <p>
+    <b>Nombre</b><br />
+    <%= f.text_field :nombre %>
+  </p>
+
+  <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @wall %> |
+<%= link_to 'Back', walls_path %>

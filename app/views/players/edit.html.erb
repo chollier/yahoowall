@@ -1,0 +1,17 @@
+<h1>Editing player</h1>
+
+<%= error_messages_for :player %>
+
+<% form_for(@player) do |f| %>
+  <p>
+    <b>Nom</b><br />
+    <%= f.text_field :nom %>
+  </p>
+
+  <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @player %> |
+<%= link_to 'Back', players_path %>
