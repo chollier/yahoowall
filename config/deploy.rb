@@ -25,13 +25,3 @@ task :update_config, :roles => [:app] do
 end
 after "deploy:update_code", :update_config
 
-task :symlink_index, :roles => [:app] do
-  run "ln -fs #{shared_path}/index #{release_path}/index"
-end
-before 'deploy:symlink', :symlink_index
-
-#task :start_ferret, :roles => [:app] do
-#  run "chmod 666 #{current_path}/log/ferret_server.log #{current_path}/log/ferret.pid"
-#  run "#{current_path}/script/ferret_server -e production stop && #{current_path}/script/ferret_server -e production start"
-#end
-#after 'deploy:restart', :start_ferret
